@@ -1,2 +1,1 @@
-# tryout
-sonicgarden's tryout
+This is result of sonicgarden's tryout.
