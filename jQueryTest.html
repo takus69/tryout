@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>About programming languages</title>
+    <link rel="stylesheet" href="./html_css_sample.css" />
+    <script type="text/javascript" src="./jquery-1.12.2.min.js"></script>
+    <script type="text/javascript">
+$(function(){
+  $("h1").mouseenter(function(){
+    $("h1").text("change!");
+  });
+  $("h1").mouseout(function(){
+    $("h1").text("About programming languages");
+  });
+  $("ul#menu").css("display", "none");
+  $("#menu").click(function(){
+    $("ul#menu").css("display", "block");
+  })
+  $("#menu").mouseout(function(){
+    $("ul#menu").css("display", "none");
+  })
+  $("#up").click(function(){
+    $("html").animate({scrollTop:0}, "slow");
+  })
+  var p = $("#bottom").eq(0).offset().top;
+  $("#down").click(function(){
+    $("html").animate({scrollTop:p}, "slow");
+  })
+})
+    </script>
+  </head>
+  <body>
+    <section>
+      <h1>About programming languages</h1>
+      <nav>
+        <p id="menu">menu</p>
+        <ul id="menu">
+          <li>Ruby</li>
+          <li>Java</li>
+          <li>C#</li>
+          <li>Objective-C</li>
+          <li>JavaScript</li>
+        </ul>
+      </nav>
+      <article>
+        <h2>What is Ruby?</h2>
+        <p id="up">up</p>
+        <p id="down">down</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc urna tortor, congue id quam malesuada, sodales fermentum sapien. Morbi ullamcorper mauris magna. Ut pretium odio nec varius pellentesque. Phasellus sem sapien, ornare ac fringilla sed, dapibus volutpat neque. Maecenas et tempor augue. Maecenas nec ante eget massa facilisis pellentesque.
+        </p>
+        <p>
+          Fusce tellus lorem, fringilla ut nisl ac, pulvinar venenatis sem. Suspendisse dictum sollicitudin semper. Integer ut lectus nisi. Donec vehicula augue vitae eleifend commodo. Maruis vehicula velit nec tellus luctus, in semper arcu ultricies. Donec aliquet interdum neque ut cursus ipsum pretium ut.
+        </p>
+        <p>
+          Curabitur posuere ullamcorper lectus a auctor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla condimentum dolor id leo posuere consequat. Suspendisse tincidunt nibh lacus, dictum ullamcorper odio lobortis vel. Fusce ut magna vitae sapien volutpat ornare nec id lectus. Etiam nec tempus lorem, in consectetur velit. Nam vitae urna ultricies dui euismod lobortis eu at risus. Duis interdum ipsum arcu, sed lacinia nunc cursus a.
+        </p>
+        <p>
+          Ut dapibus, tellus et convallis laoreet, elit felis rutrum risus, quis iaculis dolor lectus et quam. Vestibulum quis lorem pretium, accumsan ante sed, sollicitudin odio. Nulla dapibus dui a orci tristique facilisis. Mauris egestas quam nisi, eu lobortis nunc pretium sit amet. Praesent dignissim lacus lorem, et cursus arcu accumasan sed. Cras adipiscing vestibulum eros. Proin et orci eget elit viverra malesuada a in odio.
+        </p>
+        <p>
+          Morbi egestas turpis et interdum pellentesque. Curabitur sed nunc quam. Nullam luctus nisl purus, nec adipiscing augue dignissim vitae. Aliquam at consequat lacus. Nullam nec auctor tortor, ac congue urna. Morbi accumsan eros convallis ligula laoreet aliquam. Pellentesque accumsan viverra ornare. Vivamus sed eros a sem ultricies cursus. Vivamus lobortis, tortor quis auctor ultrices, ante augue temupus ipsum, ut interdum nulla mauris id nulla.
+        </p>
+        <div id="bottom"></div>
+      </article>
+    </section>
+  </body>
+</html>
+
