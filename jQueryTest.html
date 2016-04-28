@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>About programming languages</title>
-    <link rel="stylesheet" href="./html_css_sample.css" />
+    <link rel="stylesheet" href="./jQueryTest.css" />
     <script type="text/javascript" src="./jquery-1.12.2.min.js"></script>
     <script type="text/javascript">
 $(function(){
@@ -13,19 +13,18 @@ $(function(){
   $("h1").mouseout(function(){
     $("h1").text("About programming languages");
   });
-  $("ul#menu").css("display", "none");
-  $("#menu").click(function(){
-    $("ul#menu").css("display", "block");
+  $("ul#menu2").css("display", "none");
+  $("p#menu").click(function(){
+    $("ul#menu").toggle();
+    $("ul#menu2").toggle();
   })
-  $("#menu").mouseout(function(){
-    $("ul#menu").css("display", "none");
+  $("#upbutton").click(function(){
+    var p = $(window).scrollTop();
+    $("html,body").animate({scrollTop:0}, "slow");
   })
-  $("#up").click(function(){
-    $("html").animate({scrollTop:0}, "slow");
-  })
-  var p = $("#bottom").eq(0).offset().top;
-  $("#down").click(function(){
-    $("html").animate({scrollTop:p}, "slow");
+  $("#downbutton").click(function(){
+    var p = $(window).scrollTop()+$(window).height();
+    $("html,body").animate({scrollTop:p}, "slow");
   })
 })
     </script>
@@ -34,13 +33,19 @@ $(function(){
     <section>
       <h1>About programming languages</h1>
       <nav>
-        <p id="menu">menu</p>
+        <p id="menu">menu <- <b>click</b></p>
         <ul id="menu">
           <li>Ruby</li>
           <li>Java</li>
           <li>C#</li>
           <li>Objective-C</li>
           <li>JavaScript</li>
+        </ul>
+        <ul id="menu2">
+          <li>Perl</li>
+          <li>C</li>
+          <li>VB</li>
+          <li>Swift</li>
         </ul>
       </nav>
       <article>
@@ -62,7 +67,68 @@ $(function(){
         <p>
           Morbi egestas turpis et interdum pellentesque. Curabitur sed nunc quam. Nullam luctus nisl purus, nec adipiscing augue dignissim vitae. Aliquam at consequat lacus. Nullam nec auctor tortor, ac congue urna. Morbi accumsan eros convallis ligula laoreet aliquam. Pellentesque accumsan viverra ornare. Vivamus sed eros a sem ultricies cursus. Vivamus lobortis, tortor quis auctor ultrices, ante augue temupus ipsum, ut interdum nulla mauris id nulla.
         </p>
-        <div id="bottom"></div>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+        <p>11</p>
+        <p>12</p>
+        <p>13</p>
+        <p>14</p>
+        <p>15</p>
+        <p>16</p>
+        <p>17</p>
+        <p>18</p>
+        <p>19</p>
+        <p>20</p>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+        <p>11</p>
+        <p>12</p>
+        <p>13</p>
+        <p>14</p>
+        <p>15</p>
+        <p>16</p>
+        <p>17</p>
+        <p>18</p>
+        <p>19</p>
+        <p>20</p>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+        <p>11</p>
+        <p>12</p>
+        <p>13</p>
+        <p>14</p>
+        <p>15</p>
+        <p>16</p>
+        <p>17</p>
+        <p>18</p>
+        <p>19</p>
+        <p>20</p>
+        <p id="upbutton"><a>UP</a><p>
+        <p id="downbutton"><a>DOWN</a><p>
       </article>
     </section>
   </body>
